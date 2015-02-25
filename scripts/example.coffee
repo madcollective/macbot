@@ -18,6 +18,7 @@ module.exports = (robot) ->
 
   flipWords = [
     'throw',
+    'flick',
     'hurl',
     'fling',
     'lob',
