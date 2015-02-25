@@ -16,7 +16,6 @@ module.exports = (robot) ->
   robot.hear /^@macbot.*version/i, (msg) ->
     msg.send "v0.0.0"
 
-
   flipWords = [
     'throw',
     'hurl',
