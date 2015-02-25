@@ -1,0 +1,98 @@
+Tue, 24 Feb 2015 23:53:23 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Tue, 24 Feb 2015 23:53:23 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Tue Feb 24 2015 18:53:23 GMT-0500 (EST)] INFO Connecting...
+[Tue Feb 24 2015 18:53:24 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Tue Feb 24 2015 18:53:24 GMT-0500 (EST)] INFO Slack client now connected
+[Tue Feb 24 2015 18:53:24 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Tue Feb 24 2015 18:53:24 GMT-0500 (EST)] INFO Using default redis on localhost:6379
+Wed, 25 Feb 2015 00:47:35 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 00:47:35 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Tue Feb 24 2015 19:47:35 GMT-0500 (EST)] INFO Connecting...
+[Tue Feb 24 2015 19:47:36 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Tue Feb 24 2015 19:47:36 GMT-0500 (EST)] INFO Slack client now connected
+[Tue Feb 24 2015 19:47:37 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Tue Feb 24 2015 19:47:37 GMT-0500 (EST)] INFO Using default redis on localhost:6379
+Wed, 25 Feb 2015 19:27:16 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 19:27:16 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Wed Feb 25 2015 14:27:16 GMT-0500 (EST)] ERROR No services token provided to Hubot
+Wed, 25 Feb 2015 19:28:19 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 19:28:19 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Wed Feb 25 2015 14:28:19 GMT-0500 (EST)] INFO Connecting...
+[Wed Feb 25 2015 14:28:19 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Wed Feb 25 2015 14:28:20 GMT-0500 (EST)] INFO Slack client now connected
+[Wed Feb 25 2015 14:28:20 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Wed Feb 25 2015 14:28:20 GMT-0500 (EST)] INFO Using default redis on localhost:6379
+Wed, 25 Feb 2015 19:37:36 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 19:37:36 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Wed Feb 25 2015 14:37:37 GMT-0500 (EST)] INFO Connecting...
+[Wed Feb 25 2015 14:37:37 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Wed Feb 25 2015 14:37:38 GMT-0500 (EST)] INFO Slack client now connected
+[Wed Feb 25 2015 14:37:38 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Wed Feb 25 2015 14:37:38 GMT-0500 (EST)] INFO Using default redis on localhost:6379
+Wed, 25 Feb 2015 19:38:32 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 19:38:32 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Wed Feb 25 2015 14:38:32 GMT-0500 (EST)] INFO Connecting...
+[Wed Feb 25 2015 14:38:32 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Wed Feb 25 2015 14:38:34 GMT-0500 (EST)] INFO Slack client now connected
+[Wed Feb 25 2015 14:38:34 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Wed Feb 25 2015 14:38:34 GMT-0500 (EST)] INFO Using default redis on localhost:6379
+[Wed Feb 25 2015 14:43:08 GMT-0500 (EST)] ERROR ReferenceError: thecoin is not defined
+  at TextListener.callback (/root/slackbot/scripts/example.coffee:21:5, <js>:12:34)
+  at TextListener.Listener.call (/root/slackbot/node_modules/hubot/src/listener.coffee:27:7, <js>:23:14)
+  at Robot.receive (/root/slackbot/node_modules/hubot/src/robot.coffee:197:9, <js>:143:33)
+  at SlackBot.Adapter.receive (/root/slackbot/node_modules/hubot/src/adapter.coffee:66:5, <js>:47:25)
+  at SlackBot.message (/root/slackbot/node_modules/hubot-slack/src/slack.coffee:135:7, <js>:166:21)
+  at Client.<anonymous> (/root/slackbot/node_modules/hubot-slack/src/slack.coffee:1:1, <js>:3:61)
+  at Client.emit (events.js:95:17)
+  at Client.onMessage (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/src/client.js:439:14)
+  at WebSocket.<anonymous> (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/src/client.js:142:24)
+  at WebSocket.emit (events.js:98:17)
+  at Receiver.self._receiver.ontext (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/WebSocket.js:697:10)
+  at Receiver.opcodes.1.finish (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/Receiver.js:397:14)
+  at Receiver.expectHandler (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/Receiver.js:384:31)
+  at Receiver.add (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/Receiver.js:93:24)
+  at CleartextStream.firstHandler (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/WebSocket.js:678:22)
+  at CleartextStream.emit (events.js:95:17)
+  at CleartextStream.<anonymous> (_stream_readable.js:765:14)
+  at CleartextStream.emit (events.js:92:17)
+  at emitReadable_ (_stream_readable.js:427:10)
+  at _stream_readable.js:420:7
+  at process._tickCallback (node.js:442:13)
+
+[Wed Feb 25 2015 14:47:06 GMT-0500 (EST)] ERROR ReferenceError: thecoin is not defined
+  at TextListener.callback (/root/slackbot/scripts/example.coffee:21:5, <js>:12:34)
+  at TextListener.Listener.call (/root/slackbot/node_modules/hubot/src/listener.coffee:27:7, <js>:23:14)
+  at Robot.receive (/root/slackbot/node_modules/hubot/src/robot.coffee:197:9, <js>:143:33)
+  at SlackBot.Adapter.receive (/root/slackbot/node_modules/hubot/src/adapter.coffee:66:5, <js>:47:25)
+  at SlackBot.message (/root/slackbot/node_modules/hubot-slack/src/slack.coffee:135:7, <js>:166:21)
+  at Client.<anonymous> (/root/slackbot/node_modules/hubot-slack/src/slack.coffee:1:1, <js>:3:61)
+  at Client.emit (events.js:95:17)
+  at Client.onMessage (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/src/client.js:439:14)
+  at WebSocket.<anonymous> (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/src/client.js:142:24)
+  at WebSocket.emit (events.js:98:17)
+  at Receiver.self._receiver.ontext (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/WebSocket.js:697:10)
+  at Receiver.opcodes.1.finish (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/Receiver.js:397:14)
+  at Receiver.expectHandler (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/Receiver.js:384:31)
+  at Receiver.add (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/Receiver.js:93:24)
+  at CleartextStream.firstHandler (/root/slackbot/node_modules/hubot-slack/node_modules/slack-client/node_modules/ws/lib/WebSocket.js:678:22)
+  at CleartextStream.emit (events.js:95:17)
+  at CleartextStream.<anonymous> (_stream_readable.js:765:14)
+  at CleartextStream.emit (events.js:92:17)
+  at emitReadable_ (_stream_readable.js:427:10)
+  at _stream_readable.js:420:7
+  at process._tickCallback (node.js:442:13)
+
+Wed, 25 Feb 2015 19:48:15 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 19:48:15 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Wed Feb 25 2015 14:48:15 GMT-0500 (EST)] INFO Connecting...
+[Wed Feb 25 2015 14:48:16 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Wed Feb 25 2015 14:48:16 GMT-0500 (EST)] INFO Slack client now connected
+[Wed Feb 25 2015 14:48:17 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Wed Feb 25 2015 14:48:17 GMT-0500 (EST)] INFO Using default redis on localhost:6379
+Wed, 25 Feb 2015 19:59:03 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Wed, 25 Feb 2015 19:59:03 GMT connect deprecated limit: Restrict request size at location of read at node_modules/hubot/node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+[Wed Feb 25 2015 14:59:03 GMT-0500 (EST)] INFO Connecting...
+[Wed Feb 25 2015 14:59:04 GMT-0500 (EST)] INFO Logged in as macbot of the MAC, but not yet connected
+[Wed Feb 25 2015 14:59:04 GMT-0500 (EST)] INFO Slack client now connected
+[Wed Feb 25 2015 14:59:04 GMT-0500 (EST)] ERROR hubot-heroku-alive included, but missing HUBOT_HEROKU_KEEPALIVE_URL. `heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)`
+[Wed Feb 25 2015 14:59:05 GMT-0500 (EST)] INFO Using default redis on localhost:6379
