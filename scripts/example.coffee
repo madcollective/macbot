@@ -18,8 +18,8 @@ module.exports = (robot) ->
     
   thecoin = ["heads", "tails"]
 
-  robot.respond /(throw|flip|toss) a coin/i, (msg) ->
-    msg.reply msg.random thecoin
+  robot.hear /(throw|flip|toss) a coin/i, (msg) ->
+    msg.send msg.random thecoin
 
   robot.hear /playground rule/i, (msg) ->
     msg.send [
