@@ -30,7 +30,7 @@ module.exports = (robot) ->
         "6. Have fun"
     ].join "\n"
 
-  robot.hear /:raised-hand:/i, (msg) ->
+  robot.hear /:raised_hand:/i, (msg) ->
     msg.send ":pray:"
 
   # robot.respond /open the (.*) doors/i, (msg) ->
