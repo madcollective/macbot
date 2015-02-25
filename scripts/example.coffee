@@ -13,7 +13,7 @@ module.exports = (robot) ->
   robot.hear /badger/i, (msg) ->
     msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
 
-  robot.hear /^@macbot:.*version/i, (msg) ->
+  robot.hear /^@macbot.*version/i, (msg) ->
     msg.send "v0.0.0"
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
