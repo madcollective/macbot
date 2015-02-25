@@ -16,8 +16,29 @@ module.exports = (robot) ->
   robot.hear /^@macbot.*version/i, (msg) ->
     msg.send "v0.0.0"
 
-  robot.hear /(throw|hurl|fling|lob|project|chuck|flip|toss) a (coin|penny|nickel|dime|quarter|half\Wdollar)/i, (msg) ->
-    coin = ["heads :thumbsup:", "tails :thumbsdown:"]
+  flipWords = [
+    'throw',
+    'hurl',
+    'fling',
+    'lob',
+    'project',
+    'chuck',
+    'flip',
+    'toss'
+  ].join('|');
+
+  coinWords = [
+    'coin',
+    'penny',
+    'nickel',
+    'dime',
+    'quarter',
+    'half\\Wdollar'
+  ].join('|');
+
+  coinRegEx = new RegExp "(" + flipWords + ") a (" + coinWords + ")", "i";
+  robot.hear coinRegEx, (msg) ->
+    coin = ["heads", "tails"]
     msg.send msg.random coin
 
   robot.hear /playground rule/i, (msg) ->
