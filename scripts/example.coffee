@@ -17,8 +17,8 @@ module.exports = (robot) ->
     msg.send "v0.0.0"
 
   robot.hear /(throw|flip|toss) a coin/i, (msg) ->
-    theCoin = ["heads", "tails"]
-    msg.send msg.random thecoin
+    coin = ["heads", "tails"]
+    msg.send msg.random coin
 
   robot.hear /playground rule/i, (msg) ->
     msg.send [
