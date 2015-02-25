@@ -16,7 +16,7 @@ module.exports = (robot) ->
   robot.hear /^@macbot.*version/i, (msg) ->
     msg.send "v0.0.0"
 
-  robot.hear /(throw|flip|toss) a coin/i, (msg) ->
+  robot.hear /(throw|hurl|fling|lob|project|chuck|flip|toss) a (coin|penny|nickel|dime|quarter|half\wdollar)/i, (msg) ->
     coin = ["heads", "tails"]
     msg.send msg.random coin
 
