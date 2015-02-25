@@ -33,7 +33,7 @@ module.exports = (robot) ->
     'nickel',
     'dime',
     'quarter',
-    'half\Wdollar'
+    'half\\Wdollar'
   ].join('|');
 
   coinRegEx = new RegExp "(" + flipWords + ") a (" + coinWords + ")", "i";
