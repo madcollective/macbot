@@ -25,6 +25,12 @@ module.exports = (robot) ->
         "5. Play well with others",
         "6. Have fun"
     ].join "\n"
+    
+  thecoin = ["heads", "tails"]
+
+    module.exports = (robot) ->
+    robot.respond /(throw|flip|toss) a coin/i, (msg) ->
+    msg.reply msg.random thecoin
 
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
