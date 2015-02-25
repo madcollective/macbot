@@ -28,8 +28,7 @@ module.exports = (robot) ->
     
   thecoin = ["heads", "tails"]
 
-    module.exports = (robot) ->
-    robot.respond /(throw|flip|toss) a coin/i, (msg) ->
+  robot.respond /(throw|flip|toss) a coin/i, (msg) ->
     msg.reply msg.random thecoin
 
   # robot.respond /open the (.*) doors/i, (msg) ->
