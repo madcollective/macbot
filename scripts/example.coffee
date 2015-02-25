@@ -15,6 +15,17 @@ module.exports = (robot) ->
 
   robot.hear /^@macbot:.*version/i, (msg) ->
     msg.send "v0.0.0"
+
+  robot.hear /playground rule/i, (msg) ->
+    msg.send [
+        "1. Do good work",
+        "2. Be dependable",
+        "3. Act with integrity",
+        "4. Be positive",
+        "5. Play well with others",
+        "6. Have fun"
+    ].join "\n"
+
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
   #   if doorType is "pod bay"
