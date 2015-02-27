@@ -21,6 +21,6 @@ module.exports = (robot) ->
   ].join('|');
 
   coinRegEx = new RegExp "(" + flipWords + ") a (" + coinWords + ")", "i";
-  robot.hear coinRegEx, (msg) ->
+  robot.respond coinRegEx, (msg) ->
     coin = ["heads", "tails"]
     msg.send msg.random coin
