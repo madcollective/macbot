@@ -15,7 +15,7 @@ module.exports = function (robot) {
     envelope.user.room = envelope.room = config.room;
   }
 
-  setInterval(function () {
+  // setInterval(function () {
     robot.send(envelope, config.msg);
-  }, config.interval);
+  // }, config.interval);
 };
