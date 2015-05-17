@@ -16,7 +16,7 @@ module.exports = function (robot) {
   }
 
   setInterval(function () {
-    if (typeof robot !== 'undefined') {
+    if (robot && robot.send) {
       robot.send(envelope, config.msg);
     }
   }, config.interval);
