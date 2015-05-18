@@ -7,7 +7,7 @@ module.exports = function (robot) {
     cronTime: '45 9 * * 1'
   };
 
-  new CronJob(config.crontime, function() {
+  new CronJob(config.cronTime, function() {
     robot.messageRoom(config.room, config.msg);
   }, null, true, 'America/Los_Angeles');
 
