@@ -1,3 +1,6 @@
+# Description:
+#   For keeping troublemakers in line.
+
 module.exports = (robot) ->
   robot.hear /playground rule/i, (msg) ->
     msg.send [

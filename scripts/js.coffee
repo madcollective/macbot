@@ -1,3 +1,6 @@
+# Description:
+#   Blindly evaluates JavaScript. Totally safe. Totally.
+
 ent = require "ent"
 module.exports = (robot) ->
 

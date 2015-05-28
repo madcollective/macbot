@@ -1,3 +1,6 @@
+# Description:
+#   Good ideas, bad ideas, and everything in-between.
+
 module.exports = (robot) ->
 
   robot.hear /good idea/i, (msg) ->

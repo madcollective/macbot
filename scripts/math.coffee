@@ -1,3 +1,6 @@
+# Description:
+#   A 21st-century robot capable of second-grade math. Amazing.
+
 module.exports = (robot) ->
 
   # https://regex101.com/r/kD1iK4/2
