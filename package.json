@@ -28,6 +28,6 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "jshint ./scripts/*.js && coffeelint ./scripts/*.coffee"
+    "test": "jshint ./scripts/*.js && coffeelint ./scripts/*.coffee && ./bin/hubot -t"
   }
 }
