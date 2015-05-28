@@ -28,6 +28,9 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "jshint ./scripts/*.js && coffeelint ./scripts/*.coffee && ./bin/hubot -t"
+    "test": "npm run test-jshint && npm run test-coffeelint && npm run test-hubot",
+    "test-jshint": "jshint ./scripts/*.js",
+    "test-coffeelint": "coffeelint ./scripts/*.coffee",
+    "test-hubot": "./bin/hubot -t"
   }
 }

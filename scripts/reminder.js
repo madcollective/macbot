@@ -1,3 +1,6 @@
+// Description:
+//   Posts the weekly standup link every Monday at 10am.
+
 var CronJob = require('cron').CronJob;
 
 module.exports = function (robot) {

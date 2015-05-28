@@ -1,3 +1,6 @@
+# Description:
+#   Flip a coin or flick a nickel. Your call.
+
 module.exports = (robot) ->
   flipWords = [
     'throw',
