@@ -6,7 +6,7 @@ var CronJob = require('cron').CronJob;
 module.exports = function (robot) {
   var config = {
     room: '#_abovethefold',
-    msg: "<!channel> Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes. https://conflict-test",
+    msg: "<!channel> Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes. https://plus.google.com/hangouts/_/madcollective.com/weekly-meeting",
     cronTime: '45 9 * * 1'
   };
 
