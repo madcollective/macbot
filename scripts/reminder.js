@@ -23,7 +23,7 @@ module.exports = function (robot) {
     "satur"
   ]
   .map(function (x) {
-    return x + "day"
+    return x + "day";
   });
 
   var day = days.indexOf(config.day.toLowerCase());
