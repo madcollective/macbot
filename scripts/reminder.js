@@ -6,12 +6,32 @@ var CronJob = require('cron').CronJob;
 module.exports = function (robot) {
   var config = {
     room: '#_abovethefold',
-    msg: "<!channel> Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes. https://plus.google.com/hangouts/_/madcollective.com/weekly-meeting",
-    cronTime: '45 9 * * 1'
+    msg: "Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes.",
+    link:  "https://plus.google.com/hangouts/_/madcollective.com/weekly-meeting",
+    time: "9:45",
+    day: "Monday",
+    timezone: "America/Los_Angeles"
   };
 
-  new CronJob(config.cronTime, function() {
-    robot.messageRoom(config.room, config.msg);
-  }, null, true, 'America/Los_Angeles');
+  var days = [
+    "sun",
+    "mon",
+    "tues",
+    "wednes",
+    "thurs",
+    "fri",
+    "satur"
+  ]
+  .map(function (x) {
+    return x + "day";
+  });
 
+  var day = days.indexOf(config.day.toLowerCase());
+  var time = config.time.split(":");
+  var message = ["<!channel>", config.msg, config.link].join(" ");
+  var cronTime = [time[1], time[0], "*", "*", day].join(" ");
+
+  new CronJob(cronTime, function() {
+    robot.messageRoom(config.room, message);
+  }, null, true, config.timezone);
 };
