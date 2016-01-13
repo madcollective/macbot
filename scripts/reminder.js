@@ -7,7 +7,7 @@ module.exports = function (robot) {
   var config = {
     room: '#_abovethefold',
     msg: "Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes.",
-    link:  "https://hangoutsapi.talkgadget.google.com/hangouts/_/gv2qg7ppm4grwujmfbvrm2iflya",
+    link:  "https://plus.google.com/hangouts/_/madcollective.com/weekly-meeting",
     time: "9:45",
     day: "Monday",
     timezone: "America/Los_Angeles"
@@ -25,7 +25,7 @@ module.exports = function (robot) {
   .map(function (x) {
     return x + "day"
   });
-  
+
   var day = days.indexOf(config.day.toLowerCase());
   var time = config.time.split(":");
   var message = ["<!channel>", config.msg, config.link].join(" ");
@@ -35,4 +35,3 @@ module.exports = function (robot) {
     robot.messageRoom(config.room, message);
   }, null, true, config.timezone);
 };
-
