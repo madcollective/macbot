@@ -38,7 +38,7 @@ var spells = [
 		}
 	},
 	{
-		incantation: 'aquaticus',
+		incantation: 'madefio',
 		isAttack: true,
 		description: 'soaks with water',
 		callback: function(robot, playerState, opponentName, onSelf) {
@@ -118,9 +118,10 @@ module.exports = function (robot) {
 	}
 
 	function registerSpell(robot, spell) {
-		var regex = new RegExp(spell.incantation + '\s?(self)?!', 'i');
+		var regex = new RegExp('^' + spell.incantation + '(\\sself)?!', 'i');
+
 		robot.hear(regex, function(msg) {
-			var self = msg.match[1];
+			var onSelf = msg.match[1];
 			var currentUsername = msg.message.user.name;
 			var playerState = getPlayerState(currentUsername);
 
@@ -145,7 +146,7 @@ module.exports = function (robot) {
 				if (turn.player == playerState.name) {
 					// Determine what the next turn will be depending on what type
 					//   of spell this was and what turn it is.
-					if (spell.isAttack && !turn.attack) {
+					if (!onSelf && !turn.attack) {
 						// They skipped the passive part of their turn
 						msg.send('@' + playerState.name + ' skipped his passive turn and went right to the attack!');
 						// Go straight to the beginning of the opponent's turn
@@ -157,7 +158,7 @@ module.exports = function (robot) {
 					}
 
 					// Perform the spell
-					spell.callback(robot, playerState, opponentName, self);
+					spell.callback(robot, playerState, opponentName, onSelf);
 				}
 				else {
 					msg.reply('It is not your turn.');
