@@ -5,9 +5,10 @@
   "author": "christianbundy@fraction.io",
   "description": "A simple helpful robot for the Madison Ave. Collective",
   "dependencies": {
+    "coffeelint": "^1.9.7",
     "cron": "^1.0.9",
     "ent": "^2.2.0",
-    "hubot": "^2.12.0",
+    "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.4",
     "hubot-google-translate": "^0.1.0",
@@ -21,8 +22,7 @@
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
     "hubot-youtube": "^0.1.2",
-    "jshint": "^2.7.0",
-    "coffeelint": "^1.9.7"
+    "jshint": "^2.7.0"
   },
   "engines": {
     "node": "0.10.x"
