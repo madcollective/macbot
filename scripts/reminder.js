@@ -7,7 +7,7 @@ module.exports = function (robot) {
   var config = {
     room: '#_abovethefold',
     msg: "Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes.",
-    link:  "https://plus.google.com/hangouts/_/madcollective.com/weekly-meeting",
+    link:  "https://appear.in/madcollective",
     time: "9:45",
     day: "Monday",
     timezone: "America/Los_Angeles"
