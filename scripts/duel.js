@@ -33,7 +33,7 @@ var spells = [
 	{
 		incantation: 'volito',
 		description: 'levitates',
-		callback: function(robot, playerState, opponentName, onSelf) {
+		cast: function(robot, playerState, opponentName, onSelf) {
 
 		}
 	},
@@ -41,7 +41,7 @@ var spells = [
 		incantation: 'madefio',
 		isAttack: true,
 		description: 'soaks with water',
-		callback: function(robot, playerState, opponentName, onSelf) {
+		cast: function(robot, playerState, opponentName, onSelf) {
 
 		}
 	}
@@ -157,8 +157,14 @@ module.exports = function (robot) {
 						startAttackTurn(playerState.name, challenger, challengee);
 					}
 
-					// Perform the spell
-					spell.callback(robot, playerState, opponentName, onSelf);
+					// Attempt to perform the spell
+					var succeeded = getSpellSuccess(playerState, spell);
+					if (succeeded)
+						spell.cast(robot, playerState, opponentName, onSelf);
+					else if (spell.failure)
+						spell.failure(robot, playerState, opponentName, onSelf);
+					else
+						msg.send('@' + playerState.name + ' fails to cast ' + spell.incantation + '.');
 				}
 				else {
 					msg.reply('It is not your turn.');
