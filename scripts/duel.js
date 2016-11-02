@@ -221,7 +221,7 @@ module.exports = function (robot) {
 		setDuelStatus(challenger, challengee, STATUS_CHALLENGE_SENT);
 
 		msg.send([
-			'@' + challenger + ' hath challenged @' + challengee + ' to a wizard\'s duel!  Doth ' + challengee + ' accept?',
+			'@' + challenger + ' hath challenged @' + challengee + ' to a wizard\'s duel!  _Doth @' + challengee + ' accept?_',
 			'Type "I accept @' + challenger + '\'s challenge." to accept.'
 		].join('\n'));
 	});
@@ -235,7 +235,7 @@ module.exports = function (robot) {
 			setInitialPlayerState(challengee, false, challenger);
 			setDuelStatus(challenger, challengee, STATUS_DUELING);
 
-			var startingPlayer = msg.random(challenger, challengee);
+			var startingPlayer = msg.random([ challenger, challengee ]);
 			startAttackTurn(startingPlayer, challenger, challengee);
 
 			msg.send([
