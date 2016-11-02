@@ -213,7 +213,7 @@ module.exports = function (robot) {
 	}
 
 
-	robot.hear(/I challenge (@\w+) to a wizard'?s'? duel!/i, function(msg) {
+	robot.hear(/I challenge (@\w+) to a wizard'?‘?s'?‘? duel!/i, function(msg) {
 		var challengee = msg.match[1].substring(1);
 		var challenger = msg.message.user.name;
 
@@ -226,7 +226,7 @@ module.exports = function (robot) {
 		].join('\n'));
 	});
 
-	robot.hear(/I accept (@\w+)'s challenge/i, function(msg) {
+	robot.hear(/I accept (@\w+)'?‘?s challenge/i, function(msg) {
 		var challenger = msg.match[1].substring(1);
 		var challengee = msg.message.user.name;
 
