@@ -179,7 +179,7 @@ module.exports = function (robot) {
 	}
 
 
-	robot.hear(/I challenge (@\w+) to a duel!/i, function(msg) {
+	robot.hear(/I challenge (@\w+) to a wizard'?s'? duel!/i, function(msg) {
 		var challengee = msg.match[1].substring(1);
 		var challenger = msg.message.user.name;
 
