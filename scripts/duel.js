@@ -7,10 +7,12 @@ var STATUS_DUELING = 2;
 
 var effects = {
 	'fire': {
-		adjective: 'on fire'
+		adjective: 'on fire',
+		counteracts: [ 'fog', 'cold', 'frost' ]
 	},
 	'water': {
-		adjective: 'soaking wet'
+		adjective: 'soaking wet',
+		counteracts: [ 'fire' ]
 	},
 	'cold': {
 		adjective: 'cold'
@@ -21,12 +23,44 @@ var effects = {
 	'levitation': {
 		adjective: 'floating in the air'
 	},
+	'entangling-roots': {
+		counteracts: [ 'levitation' ]
+	},
 	'frog-vomitting': {
 		adjective: 'vomitting frogs',
-		modifier: function(playerState) {
+		modify: function(playerState) {
 			playerState.turnSpellcasting *= 0.75;
 		}
 	},
+	'fog': {
+		modify: function(playerState) {
+			playerState.turnAccuracy *= 0.75;
+			playerState.turnDodge *= 1.25;
+		}
+	},
+	'sunlight': {
+		counteracts: [ 'fog' ]
+	},
+	'stench': {
+
+	},
+	'large-nose': {
+		counteracts: [ 'small-nose' ],
+		modify: function(playerState) {
+			if (playerState.effects.contains('stench')) {
+				// Double the effect of stench
+				effects['stench'].modify(playerState);
+			}
+		},
+	},
+	'small-nose': {
+		counteracts: [ 'large-nose' ],
+		modify: function(playerState) {
+			// Hmm, but how do we reverse another effect?  Do we need to
+			// have inverseModify callback?  Or do we just start listing
+			// out modifiers instead of having a modify function?
+		}
+	}
 };
 
 var spells = [
@@ -187,8 +221,8 @@ module.exports = function (robot) {
 		setDuelStatus(challenger, challengee, STATUS_CHALLENGE_SENT);
 
 		msg.send([
-			'@' + challenger + ' challenges @' + challengee + ' to a duel!  Does ' + challengee + ' accept?',
-			'Type "accepts @' + challenger + '\'s challenge!" to accept.'
+			'@' + challenger + ' hath challenged @' + challengee + ' to a wizard\'s duel!  Doth ' + challengee + ' accept?',
+			'Type "I accept @' + challenger + '\'s challenge." to accept.'
 		].join('\n'));
 	});
 
@@ -213,6 +247,28 @@ module.exports = function (robot) {
 		else {
 			msg.reply('@' + challenger + ' did not challenge you.');
 		}
+	});
+
+	robot.hear(/dueling rules/i, function(msg) {
+		msg.send([
+			'1. The combatant who starteth the duel is determined by chance.',
+			'2. The starting combatant beginneth with an offensive spell.',
+			'3. The next combatant beginneth his turn with an optional passive spell and then an offensive spell.',
+			'4. It then becommeth his opponent\'s turn, and the cycle repeateth until one duelist stands alone.'
+		].join('\n'));
+	});
+
+	robot.hear(/list spells/i, function(msg) {
+		var spellNames = spells.map(function(spell) {
+			return '- ' + spell.incantation;
+		});
+
+		msg.send([
+			'```',
+			'Spells: ',
+			spellNames.join('\n'),
+			'```'
+		].join('\n'));
 	});
 
 };
