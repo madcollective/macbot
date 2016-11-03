@@ -239,8 +239,9 @@ module.exports = function (robot) {
 			startAttackTurn(startingPlayer, challenger, challengee);
 
 			msg.send([
-				'Hear ye! Hear ye! A duel shall now commence between @' + challenger +' and @' + challengee + '!',
-				'@' + startingPlayer + ', thou hast won the coin toss and mayst begin first with an attack.',
+				'*Hear ye! Hear ye!*',
+				'A duel shall now commence between @' + challenger +' and @' + challengee + '!' +
+				'@' + startingPlayer + ', thou hast won the coin toss and mayst begin first with an attack.  ' +
 				'Whosoever requireth the list of rules shouldst only type "dueling rules".'
 			].join('\n'));
 		}
@@ -251,16 +252,19 @@ module.exports = function (robot) {
 
 	robot.hear(/dueling rules/i, function(msg) {
 		msg.send([
-			'1. The combatant who starteth the duel is determined by chance.',
-			'2. The starting combatant beginneth with an offensive spell.',
-			'3. The next combatant beginneth his turn with an optional passive spell and then an offensive spell.',
-			'4. It then becommeth his opponent\'s turn, and the cycle repeateth until one duelist stands alone.'
+			'```',
+			'Dueling Rules:',
+			'  1. The combatant who starteth the duel is determined by chance.',
+			'  2. The starting combatant beginneth with an offensive spell.',
+			'  3. The next combatant beginneth his turn with an optional passive spell and then an offensive spell.',
+			'  4. It then becommeth his opponent\'s turn, and the cycle repeateth until one duelist stands alone.',
+			'```'
 		].join('\n'));
 	});
 
 	robot.hear(/list spells/i, function(msg) {
 		var spellNames = spells.map(function(spell) {
-			return '- ' + spell.incantation;
+			return ' - ' + spell.incantation;
 		});
 
 		msg.send([
