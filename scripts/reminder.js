@@ -34,4 +34,8 @@ module.exports = function (robot) {
   new CronJob(cronTime, function() {
     robot.messageRoom(config.room, message);
   }, null, true, config.timezone);
+
+  robot.hear(/macbot, did you forget something?/i, function(msg) {
+    robot.messageRoom(config.room, message);
+  });
 };
