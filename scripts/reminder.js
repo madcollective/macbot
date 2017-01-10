@@ -4,13 +4,24 @@
 var CronJob = require('cron').CronJob;
 
 module.exports = function (robot) {
-  var config = {
-    room: '#_abovethefold',
-    msg: "Hey ya'll, here's the link for the MAC projects weekly team meeting that starts in 15 minutes.",
-    link:  "https://appear.in/madcollective",
+  var timeConfig = {
     time: "9:45",
     day: "Monday",
     timezone: "America/Los_Angeles"
+  };
+
+  var messageData = {
+    "channel": '#_abovethefold',
+    "text": "5 minute warning! MAC Monday Morning Projects Meeting (MMMPM) is about to start. A link to the call will be posted shortly.",
+    "attachments": [
+      {
+        "fallback": "Required plain-text summary of the attachment.",
+        "color": "#00c2ee",
+        "title": "Get excited!",
+        "image_url": "https://www.madcollective.com/media/dancing-banana.gif",
+        "ts": Date.now()
+      }
+    ]
   };
 
   var days = [
@@ -26,16 +37,15 @@ module.exports = function (robot) {
     return x + "day";
   });
 
-  var day = days.indexOf(config.day.toLowerCase());
-  var time = config.time.split(":");
-  var message = ["<!channel>", config.msg, config.link].join(" ");
+  var day = days.indexOf(timeConfig.day.toLowerCase());
+  var time = timeConfig.time.split(":");
   var cronTime = [time[1], time[0], "*", "*", day].join(" ");
 
-  new CronJob(cronTime, function() {
-    robot.messageRoom(config.room, message);
-  }, null, true, config.timezone);
+  function sendMessage() {
+    robot.send(messageData);
+  }
 
-  robot.hear(/macbot, did you forget something?/i, function(msg) {
-    robot.messageRoom(config.room, message);
-  });
+  new CronJob(cronTime, sendMessage, null, true, config.timezone);
+
+  robot.hear(/macbot, did you forget something?/i, sendMessage);
 };
