@@ -45,7 +45,7 @@ module.exports = function (robot) {
     robot.send(messageData);
   }
 
-  new CronJob(cronTime, sendMessage, null, true, config.timezone);
+  new CronJob(cronTime, sendMessage, null, true, timeConfig.timezone);
 
   robot.hear(/macbot, did you forget something?/i, sendMessage);
 };
