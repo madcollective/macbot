@@ -11,7 +11,7 @@ module.exports = function (robot) {
   };
 
   var messageData = {
-    "channel": '#_abovethefold',
+    // "channel": '#_abovethefold',
     "text": "5 minute warning! MAC Monday Morning Projects Meeting (MMMPM) is about to start. A link to the call will be posted shortly.",
     "attachments": [
       {
