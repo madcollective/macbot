@@ -11,7 +11,7 @@ module.exports = function (robot) {
   };
 
   var messageData = {
-    // "channel": '#_abovethefold',
+    "channel": '#_abovethefold',
     "text": "5 minute warning! MAC Monday Morning Projects Meeting (MMMPM) is about to start. A link to the call will be posted shortly.",
     "attachments": [
       {
@@ -42,7 +42,7 @@ module.exports = function (robot) {
   var cronTime = [time[1], time[0], "*", "*", day].join(" ");
 
   function sendMessage() {
-    robot.send(messageData);
+    robot.messageRoom(messageData.channel, messageData);
   }
 
   new CronJob(cronTime, sendMessage, null, true, timeConfig.timezone);
