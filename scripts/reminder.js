@@ -5,7 +5,7 @@ var CronJob = require('cron').CronJob;
 
 module.exports = function (robot) {
   var timeConfig = {
-    time: "9:45",
+    time: "9:55",
     day: "Monday",
     timezone: "America/Los_Angeles"
   };
