@@ -5,15 +5,16 @@ module.exports = (robot) ->
 
   robot.hear /good idea/i, (msg) ->
     good_idea = [
-      "Anticipating needs of teammates",
+      "Anticipating the needs of your teammates",
       "Giving status reports before being asked :star2: :star2: :star2:",
-      "Listening openly not just planning your reply - yes+1",
-      "Meetings: listen to client 90% talk10% sleep 5%",
-      "Meetings: start w/ agenda; focus + listen",
-      "Meetings: write up minutes + action items",
-      "Thinking / Writing / talking with the client / customer / user in mind"
+      "Listening openly, not just planning your reply - yes+1",
+      "Meetings - listen 90%, talk 10%",
+      "Meetings - start with an agenda",
+      "Meetings - write up minutes + action items",
+      "Meetings - come prepared",
+      "Thinking with the client / customer / user in mind"
     ]
-    msg.send msg.random good_idea
+    msg.send('Good idea: ' + msg.random good_idea)
 
   robot.hear /bad idea/i, (msg) ->
     bad_idea = [
@@ -22,4 +23,4 @@ module.exports = (robot) ->
       "Going to bed w/ shoes on",
       "Putting on hand lotion before trying to clip your toenails",
     ]
-    msg.send msg.random bad_idea
+    msg.send('Bad idea: ' + msg.random bad_idea)

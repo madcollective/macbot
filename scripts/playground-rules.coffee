@@ -4,6 +4,7 @@
 module.exports = (robot) ->
   robot.hear /playground rule/i, (msg) ->
     msg.send [
+        "**Playground Rules**",
         "1. Do good work",
         "2. Be dependable",
         "3. Act with integrity",
